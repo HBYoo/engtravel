@@ -69,20 +69,22 @@
             color: var(--primary-color);
         }
 
-       .hero {
-           height: 100vh;
-           background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-           url('/engtravel/background.webp');  /* repository 이름을 포함한 경로 */
-           background-size: cover;
-           background-position: center;
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           text-align: center;
-           color: var(--white);
-           padding: 2rem;
-           margin-top: 60px;
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                       url('/engtravel/background.webp');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 2rem;
+            margin-top: 60px;
         }
+
         .hero-content h1 {
             font-size: 3rem;
             margin-bottom: 1.5rem;
@@ -432,4 +434,6 @@
 
         setInterval(rotateTagline, 3000);
 
-        // 설문
+        // 폼 제출 처리
+        document.getElementById('learning-path-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
